@@ -10,12 +10,17 @@ import static java.lang.Double.valueOf;
 
 public class InteractRunner {
 
-    private double first, second; /* variables to store value for calculate*/
+    private double first, second; 
     private static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-    private String exit, command; /* exit is store command yes/no for end;
-                                  command is store № of operation*/
+    private String exit, command; 
     private Calculator calculator;
-
+	
+	/* 	first,second - store values for calculate 
+		exit - store command yes/no for end;
+		command - store № of operation
+	*/
+	
+	
     public InteractRunner() {
         calculator = new Calculator();
     }
