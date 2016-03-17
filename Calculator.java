@@ -2,35 +2,47 @@
 
 public class Calculator {
 
-	private double result;
+    private double result;
 
-	public Calculator() { /* constructor for create object */
-		result = 0;
-	}
 
-	public void sum(double a,double b) {		
-			result= a+b;
-	}
+    public Calculator() {
+        result = 0;
+    }
 
-	public void pow(double a, double b) {
-		result = Math.pow(a, b);
-	}
+    /*
+    * Calcuate operation SUM
+    */
+    public void sum(double first, double second) {
+        result = first + second;
+    }
 
-	public double getConstPI() {
-		result = Math.PI;
-		return result;
-	}
+    /*
+    *Calculate operation involution
+    */
+    public void pow(double a, double b) {
+        result = Math.pow(a, b);
+    }
 
-	public void multipl(double a, double b) {
-		result = a*b;
-	}
+    /*
+    * Get constant PI
+    */
+    public double getConstPI() {
+        result = Math.PI;
+        return result;
+    }
 
-	public void cleanResult() {
-		this.result = 0;
-	}
+    /*
+    *Calculate operation multiplication
+    */
+    public void mult(double a, double b) {
+        result = a * b;
+    }
 
-	public double getResult() {
-		return result;
-	}
+    public void cleanResult() {
+        this.result = 0;
+    }
 
+    public double getResult() {
+        return result;
+    }
 }
