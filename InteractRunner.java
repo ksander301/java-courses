@@ -58,7 +58,7 @@ public class InteractRunner {
     }
 
    /* Recognize the operation command,
-    to initialiaze values for callculate by calling method inputValues,
+    to initialiaze values for callculate by calling method initValues,
     call validateExit method   */
 
     public void executeOperation(String command) throws IOException {
