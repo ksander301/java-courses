@@ -30,10 +30,10 @@ public class Calculator {
         result = Math.PI;
         return result;
     }
-
     /*
     *Calculate operation multiplication
     */
+
     public void mult(double a, double b) {
         result = a * b;
     }

@@ -10,17 +10,16 @@ import static java.lang.Double.valueOf;
 
 public class InteractRunner {
 
-    private double first, second; 
+    private double first, second;
     private static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-    private String exit, command; 
-    private Calculator calculator;
-	
-	/* 	first,second - store values for calculate 
-		exit - store command yes/no for end;
+    private String exit, command;
+    /* 	first,second - store values for calculate
+        exit - store command yes/no for end;
 		command - store № of operation
+		calculator - object of class Calculator
 	*/
-	
-	
+    private Calculator calculator;
+
     public InteractRunner() {
         calculator = new Calculator();
     }
@@ -31,7 +30,7 @@ public class InteractRunner {
     }
 
     /* Create object of Calculator, start the method inputCommand*/
-    private void startCalculator() throws IOException {
+    public void startCalculator() throws IOException {
         Calculator calc = new Calculator();
         this.inputCommand();
     }
@@ -40,7 +39,7 @@ public class InteractRunner {
     check the correctness of input command ( call method validateCommand),
     call executeOperation method to calculate ...*/
 
-    private void inputCommand() throws IOException {
+    public void inputCommand() throws IOException {
         System.out.println("Insert command:");
         System.out.println("1 - sum numbers\n" + "2 - multiplication\n"
                 + "3 - involution\n" + "4 - get const PI");
@@ -63,7 +62,7 @@ public class InteractRunner {
     }
 
    /* Recognize the operation command,
-    to initialiaze values for callculate by calling method initValues,
+    to initialiaze values for callculate by calling method inpitValues,
     call validateExit method   */
 
     public void executeOperation(String command) throws IOException {
@@ -111,7 +110,7 @@ public class InteractRunner {
     }
 
     /* offer to unput command for exit*/
-    private void validateExit() throws IOException {
+    public void validateExit() throws IOException {
         System.out.println("Exit from Calculator? (yes/no)");
         String exit = in.readLine();
         if (!this.recognizeExitCmd(exit))
@@ -123,7 +122,7 @@ public class InteractRunner {
     }
 
     /*check correctness of exit command*/
-    private boolean recognizeExitCmd(String exit) {
+    public boolean recognizeExitCmd(String exit) {
         boolean result = false;
         if (exit.equals("yes") || exit.equals("no"))
             result = true;
@@ -131,7 +130,7 @@ public class InteractRunner {
     }
 
     /* close the input stream */
-    private void exitCalculator() throws IOException {
-        in.close();
+    public void exitCalculator() throws IOException {
+            in.close();
     }
 }
